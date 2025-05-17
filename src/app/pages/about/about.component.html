@@ -4,7 +4,8 @@
     <div
       *ngFor="let event of educationTimeline; let i = index"
       class="timeline-item"
-      [ngClass]="{ left: i % 2 === 0, right: i % 2 !== 0 }"
+      [class.left]="i % 2 === 0"
+      [class.right]="i % 2 !== 0"
     >
       <div class="timeline-icon">
         <img [src]="event.logo" alt="{{ event.title }}" />

@@ -14,6 +14,12 @@ export class AboutComponent {
       logo: 'assets/university.png',
     },
     {
+      year: '2020',
+      title: 'Started University',
+      description: 'Began my journey in Computer Science.',
+      logo: 'assets/university.png',
+    },
+    {
       year: '2021',
       title: 'First Projects',
       description:
