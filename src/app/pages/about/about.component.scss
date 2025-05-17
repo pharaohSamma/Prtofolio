@@ -1,0 +1,179 @@
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+  background: #1a1a1a; /* Darker background */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 153, 0, 0.6); /* Muted green glow */
+  position: relative;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #00cc00; /* Brighter green */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Vertical Timeline Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px; /* Thinner line */
+  height: 100%;
+  background: #333; /* Darker line */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline Item */
+.timeline-item {
+  width: 100%;
+  margin-bottom: 30px; /* Reduced margin */
+  position: relative;
+}
+
+/* Timeline Icon (Central Dot) */
+.timeline-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00cc00; /* Brighter green dot */
+  border: 2px solid #1a1a1a; /* Dark border */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-icon img {
+  display: none; /* Hide the image in the central dot */
+}
+
+/* Timeline Content Box */
+.timeline-content {
+  background: #262626; /* Darker content background */
+  color: #f0f0f0; /* Light text color */
+  padding: 15px;
+  border-radius: 8px;
+  width: 45%; /* Adjust width */
+  box-shadow: 0 0 10px rgba(0, 153, 0, 0.3); /* Muted glow */
+  position: relative;
+}
+
+/* Positioning content to the left */
+.timeline-item.left .timeline-content {
+  left: 0;
+  right: auto; /* Ensure right is not overriding */
+}
+
+/* Positioning content to the right */
+.timeline-item.right .timeline-content {
+  right: 0;
+  left: auto; /* Ensure left is not overriding */
+}
+
+/* Arrow styles */
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 10px; /* Adjust vertical position */
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Left arrow */
+.timeline-item.left .timeline-content::before {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #262626 transparent transparent;
+}
+
+/* Right arrow */
+.timeline-item.right .timeline-content::before {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #262626;
+}
+
+/* Timeline Year */
+.year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #999; /* Gray year */
+  margin-bottom: 5px;
+}
+
+/* Title of each event */
+.event-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #eee; /* Light title */
+}
+
+/* Description */
+.event-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ccc; /* Light description */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px; /* Adjust for icon width and spacing */
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+
+  .timeline-icon {
+    top: 0;
+    left: 10px;
+    transform: translateX(0);
+  }
+
+  .timeline-content {
+    width: calc(100% - 40px); /* Adjust width to accommodate icon and spacing */
+    margin-left: 40px; /* Align content to the right of the icon */
+    margin-right: 0;
+  }
+
+  /* Positioning content to the left (for smaller screens) */
+  .timeline-item.left .timeline-content {
+    left: 40px; /* Align with the margin-left */
+    right: auto;
+  }
+
+  /* Positioning content to the right (for smaller screens) */
+  .timeline-item.right .timeline-content {
+    left: 40px; /* Align with the margin-left - effectively the same as left for vertical layout */
+    right: auto;
+  }
+
+  /* Adjust the arrow positions */
+  .timeline-item.left .timeline-content::before {
+    left: -15px; /* Adjust for margin */
+  }
+
+  .timeline-item.right .timeline-content::before {
+    left: -15px; /* Adjust for margin - same as left for vertical layout */
+  }
+}

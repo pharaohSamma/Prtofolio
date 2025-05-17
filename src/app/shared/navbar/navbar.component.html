@@ -1,0 +1,27 @@
+<nav [ngClass]="{'scrolled': isScrolled}">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo">
+          <!-- You can replace this SVG with your own logo -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+            <path d="M12 2L1 21h22L12 2zm0 4.6L19.3 19H4.7L12 6.6z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="logo-text">A.SAADANI</div>
+      </div>
+      
+      <div class="hamburger" (click)="toggleMenu()">
+        <span [ngClass]="{'active': isMenuOpen}"></span>
+        <span [ngClass]="{'active': isMenuOpen}"></span>
+        <span [ngClass]="{'active': isMenuOpen}"></span>
+      </div>
+      
+      <ul class="nav-links" [ngClass]="{'active': isMenuOpen}">
+        <li><a href="#home" (click)="isMenuOpen = false">Home</a></li>
+        <li><a href="#about" (click)="isMenuOpen = false">About</a></li>
+        <li><a href="#projects" (click)="isMenuOpen = false">Projects</a></li>
+        <li><a href="#skills" (click)="isMenuOpen = false">Skills</a></li>
+        <li><a href="#contact" (click)="isMenuOpen = false" class="contact-btn">Contact</a></li>
+      </ul>
+    </div>
+  </nav>

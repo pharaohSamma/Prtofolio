@@ -1,0 +1,95 @@
+.content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  padding-bottom: 100px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.photo img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3); /* Green glow effect */
+}
+
+.infos {
+  color: aliceblue;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.social-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* More spacing between buttons */
+}
+
+/* Social Buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Space between icon and text */
+  width: 180px; /* Keep button size balanced */
+  padding: 14px 0;
+  font-size: 20px; /* Text remains readable */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative; /* Ensure proper positioning */
+}
+
+/* Button Colors (Using Portfolio Theme) */
+.linkedin {
+  background-color: #00FF00; /* Neon Green */
+  color: #000000; /* Black Text */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.github {
+  background-color: #a6d9aa; /* Light Green */
+  color: #000000; /* Black Text */
+  box-shadow: 0 0 10px rgba(166, 217, 170, 0.5);
+}
+
+.instagram {
+  background-color: #000000; /* Black */
+  color: #00FF00; /* Neon Green Text */
+  border: 2px solid #00FF00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Icons inside Buttons */
+.social-btn img {
+  width: 80px; /* Large icon */
+  height: 80px;
+  position: absolute;
+  top: -45px; /* Moves icon above the button */
+}
+
+/* Hover Effects */
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+/* Responsive for Small Screens */
+@media (max-width: 600px) {
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.social-btn span {
+  margin-top: 40px; /* Moves text downward to avoid overlap */
+}

@@ -1,0 +1,62 @@
+.skills-container {
+    display: flex;
+    justify-content: center; /* Center skill cards */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 20px;
+  }
+  
+  .skill-card {
+    width: 30%; /* Three cards per row */
+    min-width: 250px; /* Prevents cards from getting too small */
+    background: #111; /* Slightly lighter black for contrast */
+    color: #00FF00; /* Neon green text */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3); /* Green shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.5);
+  }
+  
+  .skill-logo {
+    width: 50px; /* Adjust logo size */
+    height: 50px;
+    margin-bottom: 10px;
+    filter: brightness(1.2); /* Make sure logos are visible on dark background */
+  }
+  
+  h3 {
+    color: #a6d9aa; /* Light green title */
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between skill items */
+  }
+  
+  li {
+    background: #222; /* Darker background for contrast */
+    color: #00FF00; /* Neon green text */
+    padding: 8px 12px;
+    border-radius: 15px; /* Rounded corners */
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    border: 1px solid #00FF00; /* Green outline */
+  }
+  
+  li:hover {
+    background: #00FF00; /* Bright green on hover */
+    color: #000000; /* Black text for readability */
+  }
+  

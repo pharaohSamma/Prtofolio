@@ -1,0 +1,28 @@
+* {
+  font-family: "Roboto", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.home-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1200px;
+  z-index: 1;
+  text-align: center;
+  padding: 50px 20px;
+  padding-top: 90px;
+}
+.title {
+  color: #a6d9aa;
+}
+app-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
