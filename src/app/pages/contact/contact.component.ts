@@ -16,15 +16,15 @@ export class ContactComponent {
     },
     {
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+212 665-924737',
       link: 'tel:+15551234567',
       icon: 'assets/phone-icon.png',
       description: 'Call me for urgent matters'
     },
     {
       title: 'Location',
-      value: 'Your City, Country',
-      link: 'https://maps.google.com',
+      value: 'Tetouan, Morocco',
+      link: 'https://maps.app.goo.gl/DqKMR8Ab3qEJ5SPG9',
       icon: 'assets/location-icon.png',
       description: 'Available for local meetups'
     },
